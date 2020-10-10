@@ -1,0 +1,2 @@
+D:\cppSpace\cusConsole\Debug\Calculator.exe
+D:\cppSpace\cusConsole\Debug\Calculator.pdb

@@ -1,0 +1,2 @@
+﻿source.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/INCREMENTAL:NO' specification
+  cusConsole.vcxproj -> D:\cppSpace\cusConsole\x64\Debug\cusConsole.exe
