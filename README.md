@@ -31,4 +31,4 @@ A basic GUI application with wxWidgets framework supported
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="..\..\wxWidget\wxwidgets.props" />
 ```
-6. 
+6. the program should be compiled successfully after above steps done
