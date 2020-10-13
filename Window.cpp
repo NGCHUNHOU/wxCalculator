@@ -16,6 +16,11 @@ wxBEGIN_EVENT_TABLE(Window, wxFrame)
 	EVT_BUTTON(12, Window::OnBtn12)
 	EVT_BUTTON(13, Window::OnBtn13)
 	EVT_BUTTON(14, Window::OnBtn14)
+	EVT_BUTTON(15, Window::OnBtn15)
+	EVT_BUTTON(16, Window::OnBtn16)
+	EVT_BUTTON(17, Window::OnBtn17)
+	EVT_BUTTON(18, Window::OnBtn18)
+	EVT_BUTTON(19, Window::OnBtn19)
 wxEND_EVENT_TABLE();
 
 Window::Window(wxWindow* parent,
@@ -197,7 +202,7 @@ Window::Window(wxWindow* parent,
 	m_button11->SetForegroundColour(wxSystemSettings::GetColour(wxSYS_COLOUR_HIGHLIGHTTEXT));
 	m_button11->SetBackgroundColour(wxColour(247, 149, 48));*/
 
-	wxButton* m_button11 = this->addBtn(new wxButton(this, wxID_ANY, wxT("¡Â"), wxDefaultPosition, wxDefaultSize, 0 | wxBORDER_NONE), wxSYS_COLOUR_HIGHLIGHTTEXT, wxColour(247, 149, 48));
+	wxButton* m_button11 = this->addBtn(new wxButton(this, 15, wxT("¡Â"), wxDefaultPosition, wxDefaultSize, 0 | wxBORDER_NONE), wxSYS_COLOUR_HIGHLIGHTTEXT, wxColour(247, 149, 48));
 	bSizer8->Add(m_button11, 5, wxRIGHT | wxEXPAND, 1);
 
 	/*wxButton* m_button29 = new wxButton(this, wxID_ANY, wxT("X"), wxDefaultPosition, wxDefaultSize, 0 | wxBORDER_NONE);
@@ -205,7 +210,7 @@ Window::Window(wxWindow* parent,
 	m_button29->SetForegroundColour(wxSystemSettings::GetColour(wxSYS_COLOUR_HIGHLIGHTTEXT));
 	m_button29->SetBackgroundColour(wxColour(247, 149, 48));*/
 
-	wxButton* m_button29 = this->addBtn(new wxButton(this, wxID_ANY, wxT("X"), wxDefaultPosition, wxDefaultSize, 0 | wxBORDER_NONE), wxSYS_COLOUR_HIGHLIGHTTEXT, wxColour(247, 149, 48));
+	wxButton* m_button29 = this->addBtn(new wxButton(this, 16, wxT("X"), wxDefaultPosition, wxDefaultSize, 0 | wxBORDER_NONE), wxSYS_COLOUR_HIGHLIGHTTEXT, wxColour(247, 149, 48));
 	bSizer8->Add(m_button29, 5, wxTOP | wxBOTTOM | wxRIGHT | wxEXPAND, 1);
 
  	/*wxButton* m_button30 = new wxButton(this, wxID_ANY, wxT("-"), wxDefaultPosition, wxDefaultSize, 0 | wxBORDER_NONE);
@@ -213,7 +218,7 @@ Window::Window(wxWindow* parent,
 	m_button30->SetForegroundColour(wxSystemSettings::GetColour(wxSYS_COLOUR_HIGHLIGHTTEXT));
 	m_button30->SetBackgroundColour(wxColour(247, 149, 48));*/
 
-	wxButton* m_button30 = this->addBtn(new wxButton(this, wxID_ANY, wxT("-"), wxDefaultPosition, wxDefaultSize, 0 | wxBORDER_NONE), wxSYS_COLOUR_HIGHLIGHTTEXT, wxColour(247, 149, 48));
+	wxButton* m_button30 = this->addBtn(new wxButton(this, 17, wxT("-"), wxDefaultPosition, wxDefaultSize, 0 | wxBORDER_NONE), wxSYS_COLOUR_HIGHLIGHTTEXT, wxColour(247, 149, 48));
 	bSizer8->Add(m_button30, 5, wxBOTTOM | wxRIGHT | wxEXPAND, 1);
 
 	/*wxButton* m_button31 = new wxButton(this, wxID_ANY, wxT("+"), wxDefaultPosition, wxDefaultSize, 0 | wxBORDER_NONE);
@@ -221,7 +226,7 @@ Window::Window(wxWindow* parent,
 	m_button31->SetForegroundColour(wxSystemSettings::GetColour(wxSYS_COLOUR_HIGHLIGHTTEXT));
 	m_button31->SetBackgroundColour(wxColour(247, 149, 48));*/
 
-	wxButton* m_button31 = this->addBtn(new wxButton(this, wxID_ANY, wxT("+"), wxDefaultPosition, wxDefaultSize, 0 | wxBORDER_NONE), wxSYS_COLOUR_HIGHLIGHTTEXT, wxColour(247, 149, 48));
+	wxButton* m_button31 = this->addBtn(new wxButton(this, 18, wxT("+"), wxDefaultPosition, wxDefaultSize, 0 | wxBORDER_NONE), wxSYS_COLOUR_HIGHLIGHTTEXT, wxColour(247, 149, 48));
 	bSizer8->Add(m_button31, 5, wxBOTTOM | wxRIGHT | wxEXPAND, 1);
 
 	/*wxButton* m_button32 = new wxButton(this, wxID_ANY, wxT("="), wxDefaultPosition, wxDefaultSize, 0 | wxBORDER_NONE);
@@ -229,7 +234,7 @@ Window::Window(wxWindow* parent,
 	m_button32->SetForegroundColour(wxSystemSettings::GetColour(wxSYS_COLOUR_HIGHLIGHTTEXT));
 	m_button32->SetBackgroundColour(wxColour(247, 149, 48));*/
 
-	wxButton* m_button32 = this->addBtn(new wxButton(this, wxID_ANY, wxT("="), wxDefaultPosition, wxDefaultSize, 0 | wxBORDER_NONE), wxSYS_COLOUR_HIGHLIGHTTEXT, wxColour(247, 149, 48));
+	wxButton* m_button32 = this->addBtn(new wxButton(this, 19, wxT("="), wxDefaultPosition, wxDefaultSize, 0 | wxBORDER_NONE), wxSYS_COLOUR_HIGHLIGHTTEXT, wxColour(247, 149, 48));
 	bSizer8->Add(m_button32, 5, wxALL | wxEXPAND | wxEXPAND, 0);
 
 	this->vecText.push_back("%");
@@ -360,6 +365,72 @@ void Window::OnBtn14(wxCommandEvent& event)
 	wxString* textMapper = &this->vecText[13];
 	this->textOutput += *textMapper;
 	wxStaticText::FindWindowById(1500)->SetLabel(this->textOutput);
+};
+
+void Window::OnBtn15(wxCommandEvent& event)
+{
+	wxString divideVal = this->textOutput;
+	this->mathOperation = 1;
+	this->divideNum = wxAtoi(divideVal);
+	this->textOutput = "";
+	
+	wxStaticText::FindWindowById(1500)->SetLabel(this->textOutput);
+};
+
+void Window::OnBtn16(wxCommandEvent& event)
+{
+	wxString MultipleVal = this->textOutput;
+	this->mathOperation = 2;
+	this->multipleNum = wxAtoi(MultipleVal);
+	this->textOutput = "";
+
+	wxStaticText::FindWindowById(1500)->SetLabel(this->textOutput);
+};
+
+void Window::OnBtn17(wxCommandEvent& event)
+{
+	wxString MinusVal = this->textOutput;
+	this->mathOperation = 3;
+	this->minusNum = wxAtoi(MinusVal);
+	this->textOutput = "";
+
+	wxStaticText::FindWindowById(1500)->SetLabel(this->textOutput);
+};
+
+void Window::OnBtn18(wxCommandEvent& event)
+{
+	wxString AddVal = this->textOutput;
+	this->mathOperation = 4;
+	this->addNum = wxAtoi(AddVal);
+	this->textOutput = "";
+
+	wxStaticText::FindWindowById(1500)->SetLabel(this->textOutput);
+};
+
+void Window::OnBtn19(wxCommandEvent& event)
+{
+	wxString Output = this->textOutput;
+	this->output = wxAtoi(Output);
+	long SumResult;
+
+	switch (this->mathOperation)
+	{
+	case 1:
+		SumResult = this->divideNum / this->output;
+		break;
+	case 2:
+		SumResult = this->multipleNum * this->output;
+		break;
+	case 3:
+		SumResult = this->minusNum - this->output;
+		break;
+	case 4:
+		SumResult = this->addNum + this->output;
+		break;
+	};
+
+	wxString convert = std::to_string(SumResult);
+	wxStaticText::FindWindowById(1500)->SetLabel(convert);
 };
 
 Window::~Window()

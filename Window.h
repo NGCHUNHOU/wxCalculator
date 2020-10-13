@@ -1,6 +1,7 @@
 #pragma once
 #include "wx/wxprec.h"
 #include <vector>
+#include <string>
 
 #ifndef WX_PRECOMP
 #include "wx/wx.h"
@@ -10,6 +11,12 @@ class Window : public wxFrame
 {
 public:
     int ctlID;
+    long divideNum;
+    long multipleNum;
+    long minusNum;
+    long addNum;
+    long output;
+    int mathOperation;
     std::vector<wxString> vecText;
     wxString textOutput;
 
@@ -61,6 +68,11 @@ private:
     void OnBtn12(wxCommandEvent& event);
     void OnBtn13(wxCommandEvent& event);
     void OnBtn14(wxCommandEvent& event);
+    void OnBtn15(wxCommandEvent& event);
+    void OnBtn16(wxCommandEvent& event);
+    void OnBtn17(wxCommandEvent& event);
+    void OnBtn18(wxCommandEvent& event);
+    void OnBtn19(wxCommandEvent& event);
     wxDECLARE_EVENT_TABLE();
 	~Window();
 };

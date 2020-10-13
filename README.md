@@ -32,3 +32,8 @@ A basic GUI application with wxWidgets framework supported
     <Import Project="..\..\wxWidget\wxwidgets.props" />
 ```
 6. the program should be compiled successfully after above steps done
+
+## To do tasks
+- [x] design graphic user interface
+- [x] define and apply basic math operator to GUI
+- [ ] complete math functions
