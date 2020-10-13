@@ -1,5 +1,6 @@
 # [wxCalculator](https://github.com/NGCHUNHOU/wxCalculator)
-![calculator](https://github.com/NGCHUNHOU/wxCalculator/sample.png)
+![Calculator](https://github.com/NGCHUNHOU/wxCalculator/blob/main/sample.png)
+
 A basic GUI application with wxWidgets framework supported
 
 
