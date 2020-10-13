@@ -1,4 +1,5 @@
-# wxCalculator
+# [wxCalculator](https://github.com/NGCHUNHOU/wxCalculator)
+![calculator](https://github.com/NGCHUNHOU/wxCalculator/sample.png)
 A basic GUI application with wxWidgets framework supported
 
 
