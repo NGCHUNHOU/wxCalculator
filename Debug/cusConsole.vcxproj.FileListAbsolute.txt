@@ -1,2 +1,4 @@
 D:\cppSpace\cusConsole\Debug\Calculator.exe
 D:\cppSpace\cusConsole\Debug\Calculator.pdb
+D:\cppSpace\wxCalculator\wxCalculator\Debug\Calculator.exe
+D:\cppSpace\wxCalculator\wxCalculator\Debug\Calculator.pdb

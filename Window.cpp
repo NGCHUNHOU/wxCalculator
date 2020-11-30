@@ -107,7 +107,7 @@ Window::Window(wxWindow* parent,
 	m_button16->SetFont(wxFont(15, wxFONTFAMILY_DEFAULT, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_NORMAL, false, wxEmptyString));
 	m_button16->SetBackgroundColour(wxSystemSettings::GetColour(wxSYS_COLOUR_MENU));*/
 
-	wxButton* m_button16 = this->addBtn(new wxButton(this, 4, wxT("¡À"), wxDefaultPosition, wxDefaultSize, 0 | wxBORDER_NONE));
+	wxButton* m_button16 = this->addBtn(new wxButton(this, 4, wxT("±"), wxDefaultPosition, wxDefaultSize, 0 | wxBORDER_NONE));
 	bSizer5->Add(m_button16, 5, wxLEFT | wxRIGHT | wxBOTTOM | wxEXPAND, 1);
 
 
@@ -202,7 +202,7 @@ Window::Window(wxWindow* parent,
 	m_button11->SetForegroundColour(wxSystemSettings::GetColour(wxSYS_COLOUR_HIGHLIGHTTEXT));
 	m_button11->SetBackgroundColour(wxColour(247, 149, 48));*/
 
-	wxButton* m_button11 = this->addBtn(new wxButton(this, 15, wxT("¡Â"), wxDefaultPosition, wxDefaultSize, 0 | wxBORDER_NONE), wxSYS_COLOUR_HIGHLIGHTTEXT, wxColour(247, 149, 48));
+	wxButton* m_button11 = this->addBtn(new wxButton(this, 15, wxT("÷"), wxDefaultPosition, wxDefaultSize, 0 | wxBORDER_NONE), wxSYS_COLOUR_HIGHLIGHTTEXT, wxColour(247, 149, 48));
 	bSizer8->Add(m_button11, 5, wxRIGHT | wxEXPAND, 1);
 
 	/*wxButton* m_button29 = new wxButton(this, wxID_ANY, wxT("X"), wxDefaultPosition, wxDefaultSize, 0 | wxBORDER_NONE);
