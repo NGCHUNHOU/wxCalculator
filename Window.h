@@ -11,6 +11,7 @@ class Window : public wxFrame
 {
 public:
     int ctlID;
+    long SumResult;
     long divideNum;
     long multipleNum;
     long minusNum;

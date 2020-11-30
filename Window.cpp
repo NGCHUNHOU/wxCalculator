@@ -336,6 +336,11 @@ void Window::OnBtn10(wxCommandEvent& event)
 {
 	// delete text output
 	this->textOutput = "";
+	this->SumResult = 0;
+	this->addNum = 0;
+	this->minusNum = 0;
+	this->multipleNum = 0;
+	this->divideNum = 0;
 	wxStaticText::FindWindowById(1500)->SetLabel(this->textOutput);
 };
 
@@ -372,7 +377,15 @@ void Window::OnBtn15(wxCommandEvent& event)
 	wxString divideVal = this->textOutput;
 	this->mathOperation = 1;
 	this->divideNum = wxAtoi(divideVal);
-	this->textOutput = "";
+	if (this->SumResult)
+	{
+		this->textOutput = "";
+		this->divideNum = this->SumResult;
+	}
+	else
+	{
+		this->textOutput = "";
+	}
 	
 	wxStaticText::FindWindowById(1500)->SetLabel(this->textOutput);
 };
@@ -382,7 +395,15 @@ void Window::OnBtn16(wxCommandEvent& event)
 	wxString MultipleVal = this->textOutput;
 	this->mathOperation = 2;
 	this->multipleNum = wxAtoi(MultipleVal);
-	this->textOutput = "";
+	if (this->SumResult)
+	{
+		this->textOutput = "";
+		this->multipleNum = this->SumResult;
+	}
+	else
+	{
+		this->textOutput = "";
+	}
 
 	wxStaticText::FindWindowById(1500)->SetLabel(this->textOutput);
 };
@@ -392,7 +413,15 @@ void Window::OnBtn17(wxCommandEvent& event)
 	wxString MinusVal = this->textOutput;
 	this->mathOperation = 3;
 	this->minusNum = wxAtoi(MinusVal);
-	this->textOutput = "";
+	if (this->SumResult)
+	{
+		this->textOutput = "";
+		this->minusNum = this->SumResult;
+	}
+	else
+	{
+		this->textOutput = "";
+	}
 
 	wxStaticText::FindWindowById(1500)->SetLabel(this->textOutput);
 };
@@ -402,8 +431,15 @@ void Window::OnBtn18(wxCommandEvent& event)
 	wxString AddVal = this->textOutput;
 	this->mathOperation = 4;
 	this->addNum = wxAtoi(AddVal);
-	this->textOutput = "";
-
+	if (this->SumResult)
+	{
+		this->textOutput = "";
+		this->addNum = this->SumResult;
+	}
+	else
+	{
+		this->textOutput = "";
+	}
 	wxStaticText::FindWindowById(1500)->SetLabel(this->textOutput);
 };
 
@@ -411,25 +447,25 @@ void Window::OnBtn19(wxCommandEvent& event)
 {
 	wxString Output = this->textOutput;
 	this->output = wxAtoi(Output);
-	long SumResult;
 
+	if (!this->mathOperation) this->SumResult = 0;
 	switch (this->mathOperation)
 	{
 	case 1:
-		SumResult = this->divideNum / this->output;
+		this->SumResult = this->divideNum / this->output;
 		break;
 	case 2:
-		SumResult = this->multipleNum * this->output;
+		this->SumResult = this->multipleNum * this->output;
 		break;
 	case 3:
-		SumResult = this->minusNum - this->output;
+		this->SumResult = this->minusNum - this->output;
 		break;
 	case 4:
-		SumResult = this->addNum + this->output;
+		this->SumResult = this->addNum + this->output;
 		break;
 	};
 
-	wxString convert = std::to_string(SumResult);
+	wxString convert = std::to_string(this->SumResult);
 	wxStaticText::FindWindowById(1500)->SetLabel(convert);
 };
 
