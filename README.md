@@ -19,18 +19,22 @@ A basic GUI application with wxWidgets framework supported
 ```
 <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    /** manually set wxWidget library path with Debug x86 mode here **/
     <Import Project="..\..\wxWidget\wxwidgets.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    /** manually set wxWidget library path with Release x86 mode here **/
     <Import Project="..\..\wxWidget\wxwidgets.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    /** manually set wxWidget library path with Debug x64 mode here **/
     <Import Project="..\..\wxWidget\wxwidgets.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    /** manually set wxWidget library path with Release x64 mode here **/
     <Import Project="..\..\wxWidget\wxwidgets.props" />
 ```
 6. the program should be compiled successfully after above steps done
@@ -38,4 +42,5 @@ A basic GUI application with wxWidgets framework supported
 ## To do tasks
 - [x] design graphic user interface
 - [x] define and apply basic math operator to GUI
-- [ ] complete math functions
+- [x] complete math functions
+- [ ] fixing wrong number if no math operation is applied
